@@ -13,6 +13,10 @@ class Pet extends Model
         return $this->belongsTo(Species::class);
     }
 
+
+    /**
+     * Belongs to customer user relation.
+     */
     public function owner(){
         return $this->belongsTo(User::class, 'user_id', 'owner_id');
     }

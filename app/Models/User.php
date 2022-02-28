@@ -58,4 +58,11 @@ class User extends Authenticatable
     protected $appends = [
         'profile_photo_url',
     ];
+
+    /**
+     * User own pets.
+     */
+    public function pets(){
+        return $this->hasMany(Pet::class, 'owner_id', 'user_id');
+    }
 }

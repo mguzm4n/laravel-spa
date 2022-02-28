@@ -5,10 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Room extends Model
+class Local extends Model
 {
     use HasFactory;
-    
     public $timestamps = false;
 
     /**
@@ -17,11 +16,6 @@ class Room extends Model
      * @var string[]
      */
     protected $fillable = [
-        'local_id', 'number',
+        'name', 'address',
     ];
-
-
-    public function schedule(){
-        return $this->hasMany(Schedule::class);
-    }
 }

@@ -34,4 +34,4 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 })->name('dashboard');
 
 // Use resource(XController:class) to get access to every method.
-Route::get('/users', [UserController::class, 'index']);
+Route::resource('/user', UserController::class);
